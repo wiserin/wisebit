@@ -1,0 +1,7 @@
+set(WISEBIT_METHODS_SRC
+    ${CMAKE_CURRENT_SOURCE_DIR}/get.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/set.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/logic.cpp)
+
+
+target_sources(wisebit PRIVATE ${WISEBIT_METHODS_SRC})
