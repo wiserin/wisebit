@@ -1,3 +1,4 @@
+#include <ostream>
 #include <vector>
 
 #include "wisebit/array.hpp"
@@ -5,7 +6,7 @@
 
 namespace wisebit {
 
-bool BitArray::operator[](size_t index) {
+bool BitArray::operator[](size_t index) const {
     if (index > len_) {
         throw std::out_of_range("Выход за границы массива");
     }
@@ -17,7 +18,7 @@ bool BitArray::operator[](size_t index) {
     return bit;
 }
 
-bool BitArray::operator==(const BitArray& another) {
+bool BitArray::operator==(const BitArray& another) const {
     if (another.data_ == data_ && another.len_ == len_) {
         return true;
     } else {
@@ -26,9 +27,19 @@ bool BitArray::operator==(const BitArray& another) {
 }
 
 
-bool BitArray::operator!=(const BitArray& another) {
+bool BitArray::operator!=(const BitArray& another) const {
     return !(*this == another);
 }
 
+
+std::ostream& operator<<(std::ostream& stream, const BitArray& array) {
+    for (int i = 0; i < array.len_; ++i) {
+        stream << array.GetBit(i);
+        if ((i + 1) % 8 == 0) {
+            stream << ' ';
+        }
+    }
+    return stream;
+}
 
 } // namespace wisebit

@@ -25,19 +25,21 @@ class BitArray {
     BitArray& operator=(const BitArray& array);
     BitArray& operator=(BitArray&& array);
 
-    bool operator[](size_t index);
-    bool operator==(const BitArray& another);
-    bool operator!=(const BitArray& another);
+    bool operator[](size_t index) const;
+    bool operator==(const BitArray& another) const;
+    bool operator!=(const BitArray& another) const;
 
     void PushBack(bool bit);
     void SetBit(size_t index, bool value);
     bool InvertBit(size_t index);
 
-    bool GetBit(size_t index);
+    bool GetBit(size_t index) const;
 
     void Invert();
 
-    std::vector<uint8_t> Extract();
+    std::vector<uint8_t> Extract() const;
+
+    friend std::ostream& operator<<(std::ostream& stream, const BitArray& array);
 
     ~BitArray() = default;
 

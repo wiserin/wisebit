@@ -7,7 +7,7 @@
 
 namespace wisebit {
 
-bool BitArray::GetBit(size_t index) {
+bool BitArray::GetBit(size_t index) const {
     if (index > len_) {
         throw std::out_of_range("Выход за границы массива");
     }
@@ -20,7 +20,7 @@ bool BitArray::GetBit(size_t index) {
 }
 
 
-std::vector<uint8_t> BitArray::Extract() {
+std::vector<uint8_t> BitArray::Extract() const {
     return data_;
 }
 
