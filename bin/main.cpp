@@ -36,6 +36,11 @@ int main() {
     std::cout << bitset[6] << std::endl;
     std::cout << bitset << std::endl;
 
+    wisebit::BitArray third {std::vector<uint8_t> {121, 255}, 12};
+
+    std::cout << "Third: " << third << std::endl;
+
+
     // std::vector<uint8_t> ex = bitset.Extract();
     // std::cout << static_cast<int>(ex[0]) << std::endl;
     // std::cout << static_cast<int>(ex[1]) << std::endl;

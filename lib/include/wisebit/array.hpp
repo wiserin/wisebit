@@ -18,7 +18,9 @@ class BitArray {
     BitArray() = default;
     BitArray(size_t reserve);
     BitArray(const std::vector<uint8_t>& data);
+    BitArray(const std::vector<uint8_t>& data, size_t bits_len);
     BitArray(std::vector<uint8_t>&& data);
+    BitArray(std::vector<uint8_t>&& data, size_t bits_len);
 
     BitArray(const BitArray& array);
     BitArray(BitArray&& array);
