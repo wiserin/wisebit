@@ -1,4 +1,4 @@
-#include <ostream>
+#include <ostream>  // Copyright 2025 wiserin
 #include <vector>
 
 #include "wisebit/array.hpp"
