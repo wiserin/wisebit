@@ -4,4 +4,4 @@ set(WISEBIT_METHODS_SRC
     ${CMAKE_CURRENT_SOURCE_DIR}/logic.cpp)
 
 
-target_sources(wisebit PRIVATE ${WISEBIT_METHODS_SRC})
+target_sources(WiseBit PRIVATE ${WISEBIT_METHODS_SRC})
